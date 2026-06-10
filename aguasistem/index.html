@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agua Sistem — Especialistas en Redes de Agua, Santiago</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-overlay__inner">
+      <label for="searchInput" class="sr-only">Buscar servicio</label>
+      <input type="search" id="searchInput" class="search-overlay__input" placeholder="Buscar servicio… ej. destape, canaletas" autocomplete="off" />
+      <button class="search-overlay__close" id="searchClose" aria-label="Cerrar búsqueda">✕</button>
+    </div>
+    <div class="search-overlay__results" id="searchResults"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Agua Sistem — Inicio">
+        <img src="assets/agua-sistem-logo/svg/logo-horizontal-white.svg" alt="Agua Sistem" class="navbar__logo-img" height="44" />
+      </a>
+      <nav class="navbar__nav" aria-label="Navegación principal">
+        <a href="#servicios" class="navbar__link">Servicios</a>
+        <a href="nosotros.html" class="navbar__link">Nosotros</a>
+        <a href="contact.html" class="navbar__link">Contáctanos</a>
+      </nav>
+      <div class="navbar__actions">
+        <button class="navbar__search-btn" id="searchBtn" aria-label="Buscar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="contact.html" class="navbar__cta">Solicitar Visita</a>
+        <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false" id="menuToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile nav -->
+    <div class="navbar__mobile" id="mobileNav" aria-hidden="true">
+      <a href="#servicios" class="navbar__mobile-link">Servicios</a>
+      <a href="#nosotros" class="navbar__mobile-link">Nosotros</a>
+      <a href="contact.html" class="navbar__mobile-link">Contáctanos</a>
+      <a href="contact.html" class="navbar__mobile-cta">Solicitar Visita</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-heading">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="hero__eyebrow">Santiago · Región Metropolitana · Urgencias 24/7</p>
+        <h1 id="hero-heading" class="hero__title">Especialistas en<br><span class="hero__title--accent">Destapes de Cañerías</span><br>y Drenajes</h1>
+        <p class="hero__subtitle">Más de 15 años generando soluciones reales en tratamiento de aguas para residencias, empresas e industrias de Santiago.</p>
+        <div class="hero__actions">
+          <a href="contact.html" class="btn btn--primary">Solicitar Visita</a>
+          <a href="#servicios" class="btn btn--ghost">Ver Servicios</a>
+        </div>
+        <div class="hero__stats" aria-label="Cifras clave">
+          <div class="hero__stat">
+            <span class="hero__stat-num">15+</span>
+            <span class="hero__stat-label">Años de experiencia</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">13</span>
+            <span class="hero__stat-label">Servicios especializados</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-target="500" data-suffix="+">0</span>
+            <span class="hero__stat-label">Clientes atendidos</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">24/7</span>
+            <span class="hero__stat-label">Atención de urgencias</span>
+          </div>
+        </div>
+      </div>
+      <a href="#servicios" class="hero__scroll-indicator" aria-label="Ver servicios">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services fade-in" id="servicios" aria-labelledby="services-heading">
+      <div class="services__inner">
+        <div class="section-header">
+          <p class="section-eyebrow">Lo que hacemos</p>
+          <h2 id="services-heading" class="section-title">Nuestros Servicios</h2>
+          <p class="section-subtitle">Soluciones profesionales para residencias, edificios, empresas e industrias en toda la Región Metropolitana</p>
+        </div>
+        <div class="services-grid" id="servicesGrid">
+          <article class="svc-card svc-card--featured fade-in fade-in--delay-1" data-service="video inspeccion tuberias">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/video.webp" alt="Video inspección de tuberías" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Video Inspección</h3>
+              <p class="svc-card__desc">Diagnóstico preciso de tuberías</p>
+            </div>
+          </article>
+          <article class="svc-card fade-in fade-in--delay-2" data-service="destape alcantarillado casas edificios">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/canerias-tapadas.webp" alt="Destape de alcantarillado" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Destape de Alcantarillado</h3>
+              <p class="svc-card__desc">Casas, edificios y condominios</p>
+            </div>
+          </article>
+          <article class="svc-card fade-in fade-in--delay-3" data-service="eliminacion olores ductos canerias">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/olores-1-e1751041507743.webp" alt="Eliminación de olores" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Eliminación de Olores</h3>
+              <p class="svc-card__desc">Ductos y cañerías</p>
+            </div>
+          </article>
+          <article class="svc-card fade-in fade-in--delay-1" data-service="camaras registros instalacion venta">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:745/h:493/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2025/06/camaras-e1751398527909.jpg" alt="Instalación de cámaras de registro" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Cámaras de Registro</h3>
+              <p class="svc-card__desc">Venta e instalación en cañerías</p>
+            </div>
+          </article>
+          <article class="svc-card fade-in fade-in--delay-2" data-service="traslado limpieza aguas establecimientos">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:859/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/retiro-agua-2-e1750885289446.webp" alt="Traslado de aguas" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Traslado de Aguas</h3>
+              <p class="svc-card__desc">Limpieza y retiro en establecimientos</p>
+            </div>
+          </article>
+          <article class="svc-card fade-in fade-in--delay-3" data-service="extraccion raices tuberias">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/inspeccion-de-ductos.webp" alt="Extracción de raíces" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Extracción de Raíces</h3>
+              <p class="svc-card__desc">Remoción en tuberías</p>
+            </div>
+          </article>
+          <article class="svc-card fade-in fade-in--delay-1" data-service="limpieza canaletas aguas lluvias">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/limpieza-de-canaletas-1-1.webp" alt="Limpieza de canaletas" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Limpieza de Canaletas</h3>
+              <p class="svc-card__desc">Aguas lluvias</p>
+            </div>
+          </article>
+          <article class="svc-card fade-in fade-in--delay-2" data-service="limpieza canerias empresas edificios">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/dren-antes-y-despues.webp" alt="Limpieza de cañerías para empresas" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Limpieza de Cañerías</h3>
+              <p class="svc-card__desc">Empresas y edificios</p>
+            </div>
+          </article>
+          <article class="svc-card fade-in fade-in--delay-3" data-service="limpieza drenes absorcion aguas lluvias">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/limpieza-aguas-lluvias-1.webp" alt="Limpieza de drenes" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Limpieza de Drenes</h3>
+              <p class="svc-card__desc">Absorción de aguas lluvias</p>
+            </div>
+          </article>
+          <article class="svc-card fade-in fade-in--delay-1" data-service="limpieza fachadas techumbres">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/Lavado-en-alturas.webp" alt="Limpieza de fachadas y techumbres" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Fachadas y Techumbres</h3>
+              <p class="svc-card__desc">Lavado en alturas</p>
+            </div>
+          </article>
+          <article class="svc-card fade-in fade-in--delay-2" data-service="limpieza pisos alta presion">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/lavado-de-pisos.webp" alt="Limpieza de pisos en alta presión" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Limpieza de Pisos</h3>
+              <p class="svc-card__desc">Alta presión</p>
+            </div>
+          </article>
+          <article class="svc-card fade-in fade-in--delay-3" data-service="limpieza destape bombas fosas">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:909/h:710/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/retiro-agua-4-e1750724302226.webp" alt="Limpieza de bombas y fosas" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Bombas y Fosas</h3>
+              <p class="svc-card__desc">Limpieza y destape</p>
+            </div>
+          </article>
+          <article class="svc-card fade-in fade-in--delay-1" data-service="limpieza camaras ductos aguas lluvias">
+            <div class="svc-card__img-wrap">
+              <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/limpieza-aguas-lluvias-3.webp" alt="Limpieza de cámaras y ductos" loading="lazy" class="svc-card__img" />
+            </div>
+            <div class="svc-card__body">
+              <h3 class="svc-card__title">Cámaras y Ductos</h3>
+              <p class="svc-card__desc">Aguas lluvias</p>
+            </div>
+          </article>
+        </div>
+        <p class="services__none" id="servicesNone" hidden>No se encontraron servicios para esa búsqueda.</p>
+      </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section class="clients fade-in" id="clientes" aria-labelledby="clients-heading">
+      <div class="clients__inner">
+        <div class="section-header">
+          <p class="section-eyebrow">Confían en nosotros</p>
+          <h2 id="clients-heading" class="section-title">Empresas que nos eligen</h2>
+        </div>
+        <div class="clients__logos">
+          <div class="clients__logo-item">
+            <img src="https://mliqfkrtgzn3.i.optimole.com/w:150/h:150/q:mauto/rt:fill/g:ce/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/parque-arauco.webp" alt="Parque Arauco" class="clients__logo-img" loading="lazy" />
+            <span class="clients__logo-name">Parque Arauco</span>
+          </div>
+          <div class="clients__logo-item">
+            <img src="https://mliqfkrtgzn3.i.optimole.com/w:150/h:150/q:mauto/rt:fill/g:ce/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/hyat.png" alt="Hyatt Place" class="clients__logo-img" loading="lazy" />
+            <span class="clients__logo-name">Hyatt Place</span>
+          </div>
+          <div class="clients__logo-item">
+            <img src="https://mliqfkrtgzn3.i.optimole.com/w:150/h:150/q:mauto/rt:fill/g:ce/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/lider.webp" alt="Líder" class="clients__logo-img" loading="lazy" />
+            <span class="clients__logo-name">Líder</span>
+          </div>
+          <div class="clients__logo-item">
+            <img src="https://mliqfkrtgzn3.i.optimole.com/w:150/h:150/q:mauto/rt:fill/g:ce/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/recalcine.webp" alt="Recalcine" class="clients__logo-img" loading="lazy" />
+            <span class="clients__logo-name">Recalcine</span>
+          </div>
+          <div class="clients__logo-item">
+            <img src="https://mliqfkrtgzn3.i.optimole.com/w:150/h:150/q:mauto/rt:fill/g:ce/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/nuevo-pudahuel.webp" alt="Nuevo Pudahuel" class="clients__logo-img" loading="lazy" />
+            <span class="clients__logo-name">Nuevo Pudahuel</span>
+          </div>
+          <div class="clients__logo-item">
+            <img src="https://mliqfkrtgzn3.i.optimole.com/w:150/h:150/q:mauto/rt:fill/g:ce/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/aliservi.webp" alt="Aliservi" class="clients__logo-img" loading="lazy" />
+            <span class="clients__logo-name">Aliservi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="nosotros fade-in" id="nosotros" aria-labelledby="nosotros-heading">
+      <div class="nosotros__inner">
+        <div class="nosotros__text">
+          <p class="section-eyebrow">Quiénes somos</p>
+          <h2 id="nosotros-heading" class="section-title" style="text-align:left;">Más de 15 años generando soluciones reales en aguas</h2>
+          <p class="nosotros__desc">Somos una empresa con más de 15 años de experiencia en el mercado. Especialistas en generar soluciones reales para el tratamiento de aguas, mediante el desarrollo de diseños de ingeniería necesarios para satisfacer requerimientos de mantención de cámaras y fosas, sistemas hidráulicos, bombas y pozos profundos.</p>
+          <p class="nosotros__desc">Contamos con equipos aptos para espacios pequeños y subterráneos, lo que nos permite llegar donde otras empresas no pueden. Servicio exclusivo en Santiago y la Región Metropolitana.</p>
+          <div class="nosotros__pillars">
+            <div class="nosotros__pillar">
+              <span class="nosotros__pillar-num">01</span>
+              <div>
+                <strong class="nosotros__pillar-title">Experiencia</strong>
+                <p class="nosotros__pillar-desc">15+ años de trayectoria atendiendo a las empresas más exigentes de Chile</p>
+              </div>
+            </div>
+            <div class="nosotros__pillar">
+              <span class="nosotros__pillar-num">02</span>
+              <div>
+                <strong class="nosotros__pillar-title">Responsabilidad</strong>
+                <p class="nosotros__pillar-desc">Respondemos dentro de los plazos acordados con servicio de calidad garantizado</p>
+              </div>
+            </div>
+            <div class="nosotros__pillar">
+              <span class="nosotros__pillar-num">03</span>
+              <div>
+                <strong class="nosotros__pillar-title">Calidad</strong>
+                <p class="nosotros__pillar-desc">Personal capacitado y tecnología moderna para resultados garantizados</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nosotros__img-wrap">
+          <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/retiro-agua-2-e1750885289446.webp" alt="Equipo Agua Sistem en terreno" class="nosotros__img" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why fade-in" id="por-que" aria-labelledby="why-heading">
+      <div class="why__inner">
+        <div class="section-header">
+          <p class="section-eyebrow">Por qué elegirnos</p>
+          <h2 id="why-heading" class="section-title">Experiencia que respalda cada trabajo</h2>
+        </div>
+        <div class="why__pillars">
+          <div class="why__pillar fade-in fade-in--delay-1">
+            <div class="why__pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 class="why__pillar-title">Más de 15 Años</h3>
+            <p class="why__pillar-desc">Empresa con trayectoria comprobada. Especialistas en generar soluciones reales en el tratamiento de aguas</p>
+          </div>
+          <div class="why__pillar fade-in fade-in--delay-2">
+            <div class="why__pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="why__pillar-title">Urgencias 24/7</h3>
+            <p class="why__pillar-desc">Disponibilidad permanente para emergencias. Respondemos cuando más nos necesitas, todos los días del año</p>
+          </div>
+          <div class="why__pillar fade-in fade-in--delay-3">
+            <div class="why__pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3 class="why__pillar-title">Cobertura Santiago</h3>
+            <p class="why__pillar-desc">Equipos especializados disponibles en toda la Región Metropolitana. Llegamos donde nos necesitas</p>
+          </div>
+          <div class="why__pillar fade-in fade-in--delay-4">
+            <div class="why__pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 class="why__pillar-title">Equipos Certificados</h3>
+            <p class="why__pillar-desc">Equipos industriales de última generación. Personal técnico capacitado para espacios pequeños y subterráneos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="cta-strip" aria-label="Contacto rápido">
+      <div class="cta-strip__bg" aria-hidden="true">
+        <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:572/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/contactanos-e1748279960174.webp" alt="" role="presentation" />
+      </div>
+      <div class="cta-strip__inner">
+        <div class="cta-strip__text">
+          <h2 class="cta-strip__title">¿Necesitas ayuda ahora?</h2>
+          <p class="cta-strip__sub">Atendemos urgencias las 24 horas · Santiago y Región Metropolitana</p>
+        </div>
+        <div class="cta-strip__actions">
+          <a href="tel:+56998630299" class="cta-strip__btn cta-strip__btn--phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.35 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +56 9 9863 0299
+          </a>
+          <a href="https://wa.me/56998630299" class="cta-strip__btn cta-strip__btn--whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.563 4.14 1.54 5.876L.068 23.731a.5.5 0 0 0 .601.601l5.854-1.472A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.95 9.95 0 0 1-5.157-1.434l-.37-.22-3.824.962.98-3.58-.24-.38A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          </a>
+          <a href="contact.html" class="cta-strip__btn cta-strip__btn--contact">Ver más opciones</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/agua-sistem-logo/svg/logo-horizontal-white.svg" alt="Agua Sistem" class="footer__logo" height="32" loading="lazy" />
+        <p class="footer__tagline">Ingeniería y Mantención Industrial en Aguas</p>
+        <div class="footer__social">
+          <a href="mailto:contacto@aguasistem.cl" class="footer__social-link" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://facebook.com/aguasistem" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer__nav" aria-label="Navegación del pie de página">
+        <a href="#servicios" class="footer__link">Servicios</a>
+        <a href="nosotros.html" class="footer__link">Nosotros</a>
+        <a href="contact.html" class="footer__link">Contáctanos</a>
+      </nav>
+      <div class="footer__contact">
+        <a href="tel:+56990201255" class="footer__contact-link">+56 9 9020 1255</a>
+        <a href="mailto:contacto@aguasistem.cl" class="footer__contact-link">contacto@aguasistem.cl</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__legal">© 2026 Agua Sistem · Santiago, Chile</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/56998630299" class="wa-float" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.563 4.14 1.54 5.876L.068 23.731a.5.5 0 0 0 .601.601l5.854-1.472A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.95 9.95 0 0 1-5.157-1.434l-.37-.22-3.824.962.98-3.58-.24-.38A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <script>
+    // ---- Fade-in on scroll ----
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) {
+          el.target.classList.add('is-visible');
+          fadeObserver.unobserve(el.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    fadeEls.forEach(el => fadeObserver.observe(el));
+
+    // ---- Count-up ----
+    document.querySelectorAll('[data-target]').forEach(el => {
+      const obs = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return;
+        obs.disconnect();
+        const target = parseInt(el.dataset.target, 10);
+        const suffix = el.dataset.suffix || '';
+        const start = performance.now();
+        const dur = 1400;
+        (function tick(now) {
+          const t = Math.min((now - start) / dur, 1);
+          const ease = 1 - Math.pow(1 - t, 3);
+          el.textContent = Math.floor(ease * target) + suffix;
+          if (t < 1) requestAnimationFrame(tick);
+        })(start);
+      }, { threshold: 0.5 });
+      obs.observe(el);
+    });
+
+    // ---- Navbar scroll shadow ----
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('navbar--scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ---- Mobile menu ----
+    const toggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    toggle.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+      mobileNav.setAttribute('aria-hidden', String(!open));
+    });
+    mobileNav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileNav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        mobileNav.setAttribute('aria-hidden', 'true');
+      });
+    });
+
+    // ---- Search ----
+    const searchBtn = document.getElementById('searchBtn');
+    const searchClose = document.getElementById('searchClose');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const searchInput = document.getElementById('searchInput');
+    const servicesGrid = document.getElementById('servicesGrid');
+    const servicesNone = document.getElementById('servicesNone');
+    const allCards = Array.from(servicesGrid.querySelectorAll('.svc-card'));
+
+    searchBtn.addEventListener('click', () => {
+      searchOverlay.classList.add('is-open');
+      searchOverlay.setAttribute('aria-hidden', 'false');
+      searchInput.focus();
+    });
+    searchClose.addEventListener('click', closeSearch);
+    searchOverlay.addEventListener('click', (e) => { if (e.target === searchOverlay) closeSearch(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSearch(); });
+
+    function closeSearch() {
+      searchOverlay.classList.remove('is-open');
+      searchOverlay.setAttribute('aria-hidden', 'true');
+      searchInput.value = '';
+      filterServices('');
+    }
+
+    searchInput.addEventListener('input', (e) => filterServices(e.target.value.toLowerCase().trim()));
+
+    function filterServices(q) {
+      if (!q) {
+        allCards.forEach(c => c.hidden = false);
+        servicesNone.hidden = true;
+        return;
+      }
+      let visible = 0;
+      allCards.forEach(c => {
+        const match = c.dataset.service.includes(q) ||
+          c.querySelector('.svc-card__title').textContent.toLowerCase().includes(q);
+        c.hidden = !match;
+        if (match) visible++;
+      });
+      servicesNone.hidden = visible > 0;
+    }
+  </script>
+</body>
+</html>

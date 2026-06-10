@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros — Agua Sistem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .about-hero {
+      background: linear-gradient(160deg, #1C244B 0%, #162040 60%, #0F172A 100%);
+      padding: calc(68px + 5rem) var(--space-md) 5rem;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl); align-items: center;
+      max-width: 1400px; margin: 0 auto;
+    }
+    .about-hero__eyebrow {
+      font-size: 0.6875rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 4px;
+      color: var(--color-accent); margin-bottom: 1.25rem;
+    }
+    .about-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      font-weight: 800; color: var(--color-white);
+      line-height: 1; margin-bottom: 1.5rem;
+    }
+    .about-hero__title span { color: var(--color-accent); }
+    .about-hero__desc {
+      font-size: 1.0625rem; font-weight: 300;
+      color: rgba(255,255,255,0.65); line-height: 1.7;
+    }
+    .about-hero__img {
+      border-radius: var(--radius-lg); overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.4);
+    }
+    .about-hero__img img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    @media (max-width: 860px) {
+      .about-hero { grid-template-columns: 1fr; }
+      .about-hero__img { aspect-ratio: 16/9; }
+    }
+
+    /* Values section */
+    .about-values {
+      padding: var(--space-xl) var(--space-md);
+      max-width: 1400px; margin: 0 auto;
+    }
+    .about-values__grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-md); margin-top: var(--space-lg);
+    }
+    .about-value-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      transition: transform var(--dur-base) var(--ease-out),
+                  box-shadow var(--dur-base), border-color var(--dur-base);
+    }
+    .about-value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(28, 36, 75, 0.09);
+      border-color: rgba(70, 127, 247, 0.2);
+    }
+    .about-value-card__num {
+      font-family: var(--font-display); font-size: 3rem; font-weight: 800;
+      color: rgba(70, 127, 247, 0.15); line-height: 1; margin-bottom: var(--space-sm);
+    }
+    .about-value-card__title {
+      font-family: var(--font-display); font-size: 1.5rem; font-weight: 800;
+      color: var(--color-primary); margin-bottom: 0.5rem;
+    }
+    .about-value-card__desc {
+      font-size: 0.9375rem; font-weight: 300;
+      color: var(--color-muted); line-height: 1.65;
+    }
+    @media (max-width: 860px) { .about-values__grid { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { .about-values__grid { grid-template-columns: 1fr; } }
+
+    /* Story section */
+    .about-story {
+      background: var(--color-surface);
+      padding: var(--space-xl) var(--space-md);
+    }
+    .about-story__inner {
+      max-width: 1400px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl); align-items: center;
+    }
+    .about-story__imgs {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .about-story__img {
+      border-radius: var(--radius-md); overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .about-story__img:first-child { margin-top: 2rem; }
+    .about-story__img img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .about-story__title {
+      font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 800; color: var(--color-primary); line-height: 1.05;
+      margin-bottom: var(--space-md);
+    }
+    .about-story__p {
+      font-size: 0.9375rem; font-weight: 300;
+      color: var(--color-muted); line-height: 1.7;
+      margin-bottom: var(--space-sm);
+    }
+    @media (max-width: 860px) {
+      .about-story__inner { grid-template-columns: 1fr; }
+      .about-story__imgs { grid-template-columns: 1fr 1fr; }
+      .about-story__img:first-child { margin-top: 0; }
+    }
+
+    /* Stats strip */
+    .about-stats {
+      background: var(--color-primary);
+      padding: var(--space-lg) var(--space-md);
+    }
+    .about-stats__inner {
+      max-width: 1400px; margin: 0 auto;
+      display: flex; justify-content: center; align-items: center;
+      gap: var(--space-xl); flex-wrap: wrap;
+    }
+    .about-stat { text-align: center; }
+    .about-stat__num {
+      font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800; color: var(--color-white); line-height: 1;
+      display: block;
+    }
+    .about-stat__label {
+      font-size: 0.75rem; font-weight: 400; text-transform: uppercase;
+      letter-spacing: 1.5px; color: rgba(255,255,255,0.45);
+      margin-top: 0.5rem; display: block;
+    }
+    .about-stat-div {
+      width: 1px; height: 56px; background: rgba(255,255,255,0.1);
+    }
+    @media (max-width: 640px) { .about-stat-div { display: none; } }
+
+    /* Equipment section */
+    .about-equip {
+      padding: var(--space-xl) var(--space-md);
+      max-width: 1400px; margin: 0 auto;
+    }
+    .about-equip__list {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1rem; margin-top: var(--space-lg);
+    }
+    .about-equip__item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.25rem; background: var(--color-surface);
+      border: 1px solid var(--color-border); border-radius: var(--radius-md);
+    }
+    .about-equip__icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: rgba(70, 127, 247, 0.1); border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--color-accent);
+    }
+    .about-equip__title {
+      font-family: var(--font-body); font-size: 0.9375rem; font-weight: 600;
+      color: var(--color-primary); margin-bottom: 4px;
+    }
+    .about-equip__desc {
+      font-size: 0.8125rem; font-weight: 300;
+      color: var(--color-muted); line-height: 1.5;
+    }
+    @media (max-width: 640px) { .about-equip__list { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="Agua Sistem — Inicio">
+        <img src="assets/agua-sistem-logo/svg/logo-horizontal-white.svg" alt="Agua Sistem" class="navbar__logo-img" height="44" />
+      </a>
+      <nav class="navbar__nav" aria-label="Navegación principal">
+        <a href="index.html#servicios" class="navbar__link">Servicios</a>
+        <a href="nosotros.html" class="navbar__link" aria-current="page">Nosotros</a>
+        <a href="contact.html" class="navbar__link">Contáctanos</a>
+      </nav>
+      <div class="navbar__actions">
+        <a href="contact.html" class="navbar__cta">Solicitar Visita</a>
+        <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false" id="menuToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="navbar__mobile" id="mobileNav" aria-hidden="true">
+      <a href="index.html#servicios" class="navbar__mobile-link">Servicios</a>
+      <a href="nosotros.html" class="navbar__mobile-link">Nosotros</a>
+      <a href="contact.html" class="navbar__mobile-link">Contáctanos</a>
+      <a href="contact.html" class="navbar__mobile-cta">Solicitar Visita</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <div style="background: linear-gradient(160deg, #1C244B 0%, #162040 60%, #0F172A 100%); padding-top: 68px;">
+      <div class="about-hero">
+        <div>
+          <p class="about-hero__eyebrow">Quiénes somos</p>
+          <h1 class="about-hero__title">Más de 15 años<br><span>en el mercado</span></h1>
+          <p class="about-hero__desc">Somos una empresa especializada en el tratamiento de aguas con una trayectoria sólida atendiendo a residencias, edificios, empresas e industrias en Santiago y la Región Metropolitana.</p>
+        </div>
+        <div class="about-hero__img">
+          <img src="https://aguasistem.cl/wp-content/uploads/2022/12/Diseno-sin-titulo-2.webp" alt="Nuestra empresa" loading="eager" />
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="about-stats">
+      <div class="about-stats__inner">
+        <div class="about-stat">
+          <span class="about-stat__num">15+</span>
+          <span class="about-stat__label">Años de experiencia</span>
+        </div>
+        <div class="about-stat-div" aria-hidden="true"></div>
+        <div class="about-stat">
+          <span class="about-stat__num">13</span>
+          <span class="about-stat__label">Servicios especializados</span>
+        </div>
+        <div class="about-stat-div" aria-hidden="true"></div>
+        <div class="about-stat">
+          <span class="about-stat__num">500+</span>
+          <span class="about-stat__label">Clientes atendidos</span>
+        </div>
+        <div class="about-stat-div" aria-hidden="true"></div>
+        <div class="about-stat">
+          <span class="about-stat__num">24/7</span>
+          <span class="about-stat__label">Urgencias</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- VALUES -->
+    <section class="about-values" aria-labelledby="values-heading">
+      <div class="section-header">
+        <p class="section-eyebrow">Nuestros pilares</p>
+        <h2 id="values-heading" class="section-title">Lo que nos define</h2>
+        <p class="section-subtitle">Tres principios que guían cada trabajo que realizamos</p>
+      </div>
+      <div class="about-values__grid">
+        <div class="about-value-card">
+          <div class="about-value-card__num">01</div>
+          <h3 class="about-value-card__title">Experiencia</h3>
+          <p class="about-value-card__desc">Más de 15 años en el mercado chileno nos respaldan. Hemos atendido a las empresas más exigentes del país, desde grandes superficies comerciales hasta hoteles internacionales, acumulando conocimiento que se traduce en soluciones efectivas.</p>
+        </div>
+        <div class="about-value-card">
+          <div class="about-value-card__num">02</div>
+          <h3 class="about-value-card__title">Responsabilidad</h3>
+          <p class="about-value-card__desc">Nos comprometemos con cada cliente a responder dentro de los plazos acordados. Para urgencias, disponemos de equipos de respuesta rápida disponibles las 24 horas del día, los 365 días del año en Santiago.</p>
+        </div>
+        <div class="about-value-card">
+          <div class="about-value-card__num">03</div>
+          <h3 class="about-value-card__title">Calidad</h3>
+          <p class="about-value-card__desc">Utilizamos tecnología moderna y contamos con personal técnico capacitado. Nuestros equipos están especialmente diseñados para trabajar en espacios pequeños y subterráneos, garantizando resultados donde otros no pueden llegar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="about-story" aria-labelledby="story-heading">
+      <div class="about-story__inner">
+        <div class="about-story__imgs">
+          <div class="about-story__img">
+            <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/video.webp" alt="Video inspección de tuberías" loading="lazy" />
+          </div>
+          <div class="about-story__img">
+            <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:788/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/canerias-tapadas.webp" alt="Trabajo en terreno" loading="lazy" />
+          </div>
+        </div>
+        <div>
+          <p class="section-eyebrow">Nuestra historia</p>
+          <h2 id="story-heading" class="about-story__title">Especialistas en generar soluciones reales</h2>
+          <p class="about-story__p">Somos una empresa con más de 15 años de experiencia en el mercado. Especialistas en generar soluciones reales para el tratamiento de aguas, mediante el desarrollo de diseños de ingeniería, necesarios para satisfacer requerimientos de mantención de cámaras y fosas, sistemas hidráulicos, bombas y pozos profundos.</p>
+          <p class="about-story__p">Nos diferenciamos por el uso de equipos aptos para espacios pequeños y subterráneos, lo que nos permite resolver problemas donde otras empresas no pueden operar. Servicio exclusivo en Santiago y la Región Metropolitana.</p>
+          <p class="about-story__p">Hoy somos referentes en la Región Metropolitana, atendiendo con los mismos estándares tanto a particulares como a grandes empresas: Parque Arauco, Hyatt Place, Líder, Recalcine, Nuevo Pudahuel y Aliservi.</p>
+          <div style="margin-top: var(--space-md);">
+            <a href="contact.html" class="btn btn--primary" style="border: 2px solid var(--color-accent);">Trabajemos juntos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPMENT -->
+    <section class="about-equip" aria-labelledby="equip-heading">
+      <div class="section-header">
+        <p class="section-eyebrow">Capacidades técnicas</p>
+        <h2 id="equip-heading" class="section-title">Equipados para cualquier desafío</h2>
+        <p class="section-subtitle">Tecnología especializada para espacios residenciales, comerciales e industriales</p>
+      </div>
+      <div class="about-equip__list">
+        <div class="about-equip__item">
+          <div class="about-equip__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </div>
+          <div>
+            <p class="about-equip__title">Cámara de Video Inspección</p>
+            <p class="about-equip__desc">Diagnóstico preciso del interior de tuberías y ductos con tecnología de imagen de alta definición</p>
+          </div>
+        </div>
+        <div class="about-equip__item">
+          <div class="about-equip__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6m0 12v2M4.93 4.93l4.24 4.24m5.66 5.66 4.24 4.24M2 12h6m8 0h6M4.93 19.07l4.24-4.24m5.66-5.66 4.24-4.24"/></svg>
+          </div>
+          <div>
+            <p class="about-equip__title">Hidrojet Industrial</p>
+            <p class="about-equip__desc">Limpieza a ultra alta presión para ductos y tuberías industriales de gran diámetro</p>
+          </div>
+        </div>
+        <div class="about-equip__item">
+          <div class="about-equip__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <p class="about-equip__title">Equipos para Espacios Reducidos</p>
+            <p class="about-equip__desc">Maquinaria especialmente diseñada para operar en espacios pequeños, subterráneos o de difícil acceso</p>
+          </div>
+        </div>
+        <div class="about-equip__item">
+          <div class="about-equip__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <div>
+            <p class="about-equip__title">Camión Hidroaspirador</p>
+            <p class="about-equip__desc">Vaciado y traslado de aguas residuales, fosas sépticas y cámaras de gran volumen</p>
+          </div>
+        </div>
+        <div class="about-equip__item">
+          <div class="about-equip__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+          </div>
+          <div>
+            <p class="about-equip__title">Extractor de Raíces</p>
+            <p class="about-equip__desc">Remoción mecánica de raíces invasivas en cañerías sin necesidad de demolición</p>
+          </div>
+        </div>
+        <div class="about-equip__item">
+          <div class="about-equip__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+          </div>
+          <div>
+            <p class="about-equip__title">Sistema de Alta Presión</p>
+            <p class="about-equip__desc">Lavado de pisos, fachadas y techumbres con equipos de alta presión para resultados industriales</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-strip" aria-label="Contacto rápido">
+      <div class="cta-strip__bg" aria-hidden="true">
+        <img src="https://mliqfkrtgzn3.i.optimole.com/w:940/h:572/q:mauto/f:best/https://aguasistem.cl/wp-content/uploads/2022/12/contactanos-e1748279960174.webp" alt="" role="presentation" />
+      </div>
+      <div class="cta-strip__inner">
+        <div class="cta-strip__text">
+          <h2 class="cta-strip__title">¿Listo para trabajar con nosotros?</h2>
+          <p class="cta-strip__sub">Solicita una visita sin costo · Respondemos en menos de 2 horas</p>
+        </div>
+        <div class="cta-strip__actions">
+          <a href="tel:+56998630299" class="cta-strip__btn cta-strip__btn--phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.35 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +56 9 9863 0299
+          </a>
+          <a href="contact.html" class="cta-strip__btn cta-strip__btn--contact">Enviar mensaje</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/agua-sistem-logo/svg/logo-horizontal-white.svg" alt="Agua Sistem" class="footer__logo" height="32" loading="lazy" />
+        <p class="footer__tagline">Ingeniería y Mantención Industrial en Aguas</p>
+        <div class="footer__social">
+          <a href="mailto:contacto@aguasistem.cl" class="footer__social-link" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://facebook.com/aguasistem" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer__nav" aria-label="Navegación del pie de página">
+        <a href="index.html#servicios" class="footer__link">Servicios</a>
+        <a href="nosotros.html" class="footer__link">Nosotros</a>
+        <a href="contact.html" class="footer__link">Contáctanos</a>
+      </nav>
+      <div class="footer__contact">
+        <a href="tel:+56990201255" class="footer__contact-link">+56 9 9020 1255</a>
+        <a href="mailto:contacto@aguasistem.cl" class="footer__contact-link">contacto@aguasistem.cl</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__legal">© 2026 Agua Sistem · Santiago, Chile</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/56998630299" class="wa-float" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.563 4.14 1.54 5.876L.068 23.731a.5.5 0 0 0 .601.601l5.854-1.472A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.95 9.95 0 0 1-5.157-1.434l-.37-.22-3.824.962.98-3.58-.24-.38A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('navbar--scrolled', window.scrollY > 20);
+    }, { passive: true });
+    const toggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    toggle.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+      mobileNav.setAttribute('aria-hidden', String(!open));
+    });
+  </script>
+</body>
+</html>
