@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Ventana Cine — Documentales con impacto</title>
+  <meta name="description" content="La Ventana Cine es una productora audiovisual chilena B Corp fundada en 2006. Documentales premiados por Sundance, SANFIC y CORFO que abren ventanas a historias urgentes.">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header" data-header>
+    <div class="header-inner">
+      <a href="#inicio" class="brand">
+        <img src="assets/logo.png" alt="" class="brand-mark" width="40" height="40">
+        <span class="brand-name">La Ventana<span class="brand-accent">Cine</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#peliculas">Películas</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#premios">Premios</a>
+        <a href="#contacto" class="nav-cta">Contacto</a>
+      </nav>
+      <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="Navegación móvil">
+      <a href="#peliculas">Películas</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#premios">Premios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img src="assets/hero-home.jpg" alt="" width="1600" height="1066" loading="eager" fetchpriority="high">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow reveal">Productora audiovisual · Empresa B · Santiago, Chile · Desde 2006</p>
+        <h1 class="hero-title reveal">
+          <span class="line">Meaningful.</span>
+          <span class="line">Influential.</span>
+          <span class="line line-accent">Storytelling.</span>
+        </h1>
+        <p class="hero-lede reveal">
+          Documentales que abren ventanas a las historias que importan — desde la Antártica
+          hasta la selva centroamericana, desde la calle hasta el living de tu casa.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#peliculas" class="btn btn-primary">Ver películas</a>
+          <a href="#contacto" class="btn btn-ghost">Conversemos</a>
+        </div>
+      </div>
+      <a href="#manifiesto" class="scroll-cue" aria-label="Bajar a la siguiente sección">
+        <span class="scroll-cue-line"></span>
+        <span class="scroll-cue-text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- MANIFESTO / STATS -->
+    <section id="manifiesto" class="manifesto">
+      <div class="manifesto-inner">
+        <div class="manifesto-text reveal">
+          <p class="eyebrow">Quiénes somos</p>
+          <h2 class="display-title">
+            Contamos historias reales,<br>
+            con <span class="text-gradient">impacto real.</span>
+          </h2>
+          <p class="manifesto-body">
+            Desde 2006, La Ventana Cine produce documentales y series que cruzan fronteras:
+            premiados por el Sundance Institute, SANFIC y CORFO, transmitidos en señal
+            abierta en Chile y Colombia, y exhibidos en festivales de todo el mundo. Somos
+            una empresa B — medimos nuestro impacto social y ambiental con el mismo rigor
+            con el que contamos nuestras historias.
+          </p>
+        </div>
+        <dl class="stats-grid reveal">
+          <div class="stat stat-large">
+            <dt>2006</dt>
+            <dd>Año de fundación, en Santiago de Chile</dd>
+          </div>
+          <div class="stat">
+            <dt>7+</dt>
+            <dd>Documentales y series producidas</dd>
+          </div>
+          <div class="stat">
+            <dt>10+</dt>
+            <dd>Premios y fondos internacionales</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- FILMS -->
+    <section id="peliculas" class="films">
+      <div class="section-head reveal">
+        <p class="eyebrow">Selección</p>
+        <h2 class="display-title">Películas que abren conversaciones</h2>
+        <p class="section-lede">
+          Una ventana a nuestro trabajo — historias que viajaron de Chile al mundo y volvieron
+          con premios, fondos y nuevas audiencias.
+        </p>
+      </div>
+
+      <div class="film-grid">
+        <article class="film-card film-1 reveal" style="--card-accent: var(--accent-gold);">
+          <img class="film-still" src="assets/chicago-boys.jpg" alt="Manifestantes caminan por una calle de Santiago al atardecer, escena del documental Chicago Boys" width="1100" height="618" loading="lazy">
+          <img class="film-poster" src="assets/poster-chicago-boys.jpg" alt="Afiche de la película Chicago Boys" width="421" height="600" loading="lazy">
+          <div class="film-info">
+            <span class="film-tag">Largometraje documental</span>
+            <h3>Chicago Boys</h3>
+            <p>¿Hasta dónde estarías dispuesto a llegar en nombre de la libertad económica? La
+              historia de los economistas que transformaron Chile — y el mundo.</p>
+            <span class="film-awards">Premio UAI · CORFO TV Award</span>
+          </div>
+        </article>
+
+        <article class="film-card film-2 reveal" style="--card-accent: var(--accent-rose);">
+          <img class="film-still" src="assets/breaking-the-brick.jpg" alt="Multitud con las manos en alto durante una manifestación, escena del documental Breaking the Brick" width="1100" height="618" loading="lazy">
+          <img class="film-poster" src="assets/poster-breaking-the-brick.jpg" alt="Afiche de la película Breaking the Brick" width="418" height="600" loading="lazy">
+          <div class="film-info">
+            <span class="film-tag">De los directores de Chicago Boys</span>
+            <h3>Breaking the Brick</h3>
+            <p>Historias de un Chile que cambia: la aparente división entre dos personas
+              desaparece cuando miran hacia adentro en busca de un país mejor.</p>
+          </div>
+        </article>
+
+        <article class="film-card film-3 reveal" style="--card-accent: var(--accent-ice);">
+          <img class="film-still" src="assets/antarctica.jpg" alt="Equipo de expedición trabajando junto a un campamento en la Antártica, vista aérea" width="1100" height="733" loading="lazy">
+          <div class="film-info">
+            <span class="film-tag">Documental</span>
+            <h3>Antarctica — Searching for Adaptation</h3>
+            <p>Cuatro almas llegadas desde lejos buscan cómo sobrevivir en el fin del mundo: un
+              retrato íntimo de la vida en el continente blanco.</p>
+          </div>
+        </article>
+
+        <article class="film-card film-4 reveal" style="--card-accent: var(--accent-jungle);">
+          <img class="film-still" src="assets/ancestral-secrets.jpg" alt="Camarógrafo filmando frente al Templo del Gran Jaguar en Tikal, escena del documental Ancestral Secrets" width="1100" height="495" loading="lazy">
+          <img class="film-poster" src="assets/poster-ancestral-secrets.jpg" alt="Afiche de la película Ancestral Secrets" width="409" height="600" loading="lazy">
+          <div class="film-info">
+            <span class="film-tag">Serie documental</span>
+            <h3>Ancestral Secrets</h3>
+            <p>Guardianes de la medicina indígena: un viaje por las tribus ancestrales de
+              América y los secretos de salud y sabiduría que protegen hace generaciones.</p>
+          </div>
+        </article>
+
+        <article class="film-card film-5 reveal" style="--card-accent: var(--accent-violet);">
+          <img class="film-still" src="assets/children-season2.jpg" alt="Equipo de la serie Somos los Niñ@s sobre el escenario durante el lanzamiento de la segunda temporada" width="1100" height="733" loading="lazy">
+          <div class="film-info">
+            <span class="film-tag">Serie · Temporada 2</span>
+            <h3>We Are the Children</h3>
+            <p>Niñas y niños de todo Chile nos muestran cómo cambiar el mundo, y por qué.</p>
+          </div>
+        </article>
+
+        <article class="film-card film-6 reveal" style="--card-accent: var(--accent-gold);">
+          <img class="film-still" src="assets/undercover-mission.jpg" alt="Sala de monitoreo a oscuras con múltiples pantallas, escena del documental Undercover Mission" width="1100" height="733" loading="lazy">
+          <div class="film-info">
+            <span class="film-tag">Investigación</span>
+            <h3>Undercover Mission</h3>
+            <p>Un periodista se infiltra en las redes delictuales invisibles de Chile para
+              revelar lo que nadie quiere ver.</p>
+          </div>
+        </article>
+
+        <article class="film-card film-7 reveal" style="--card-accent: var(--accent-rose);">
+          <img class="film-still" src="assets/a-stubborn-story.jpg" alt="Tres personas mayores conversan en torno a una mesa, escena del documental A Stubborn Story" width="1100" height="618" loading="lazy">
+          <div class="film-info">
+            <span class="film-tag">Documental</span>
+            <h3>A Stubborn Story</h3>
+            <p>La resiliencia de los antiguos colonos de Colonia Dignidad y su búsqueda de paz,
+              contada desde adentro.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- AWARDS MARQUEE -->
+    <section id="premios" class="awards" aria-label="Premios y reconocimientos">
+      <p class="awards-label reveal">Reconocido por</p>
+      <div class="marquee">
+        <ul class="marquee-track">
+          <li>Sundance Institute</li>
+          <li class="dot">·</li>
+          <li>SANFIC</li>
+          <li class="dot">·</li>
+          <li>CORFO</li>
+          <li class="dot">·</li>
+          <li>CNTV</li>
+          <li class="dot">·</li>
+          <li>DOCS MX</li>
+          <li class="dot">·</li>
+          <li>Premio UAI</li>
+          <li class="dot">·</li>
+          <li>Sunscreen Film Festival</li>
+          <li class="dot">·</li>
+          <li>Señal Colombia</li>
+          <li class="dot">·</li>
+          <li>U. Alberto Hurtado</li>
+        </ul>
+        <ul class="marquee-track" aria-hidden="true">
+          <li>Sundance Institute</li>
+          <li class="dot">·</li>
+          <li>SANFIC</li>
+          <li class="dot">·</li>
+          <li>CORFO</li>
+          <li class="dot">·</li>
+          <li>CNTV</li>
+          <li class="dot">·</li>
+          <li>DOCS MX</li>
+          <li class="dot">·</li>
+          <li>Premio UAI</li>
+          <li class="dot">·</li>
+          <li>Sunscreen Film Festival</li>
+          <li class="dot">·</li>
+          <li>Señal Colombia</li>
+          <li class="dot">·</li>
+          <li>U. Alberto Hurtado</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT / TEAM -->
+    <section id="nosotros" class="about">
+      <div class="about-head reveal">
+        <p class="eyebrow">Equipo</p>
+        <h2 class="display-title">Las personas detrás de la ventana</h2>
+      </div>
+
+      <div class="founders">
+        <article class="founder reveal">
+          <img src="assets/carola-fuentes.jpg" alt="Retrato de Carola Fuentes" width="700" height="466" loading="lazy">
+          <div class="founder-info">
+            <h3>Carola Fuentes</h3>
+            <p class="founder-role">CEO · Productora · Guionista</p>
+            <p>Co-fundadora de La Ventana Cine. Ha liderado producciones reconocidas por
+              Sundance Institute, SANFIC y DOCS MX, con un sello narrativo que conecta
+              historias chilenas con audiencias internacionales.</p>
+          </div>
+        </article>
+        <article class="founder reveal">
+          <img src="assets/rafael-valdeavellano.jpg" alt="Retrato de Rafael Valdeavellano" width="490" height="700" loading="lazy">
+          <div class="founder-info">
+            <h3>Rafael Valdeavellano</h3>
+            <p class="founder-role">COO · Director</p>
+            <p>Co-fundador de La Ventana Cine. Su mirada detrás de cámara ha llevado a los
+              equipos de producción desde la Antártica hasta la selva centroamericana,
+              capturando las imágenes que sostienen cada historia.</p>
+          </div>
+        </article>
+      </div>
+
+      <figure class="team-photo reveal">
+        <img src="assets/team-office.jpg" alt="Equipo completo de La Ventana Cine reunido en su oficina de Santiago" width="1200" height="523" loading="lazy">
+        <figcaption>El equipo de La Ventana Cine, en Santiago.</figcaption>
+      </figure>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto" class="contact">
+      <div class="contact-inner reveal">
+        <p class="eyebrow">Hablemos</p>
+        <h2 class="display-title">¿Tienes una historia<br>que merece ser contada?</h2>
+        <a class="contact-email" href="mailto:contacto@laventanacine.com">contacto@laventanacine.com</a>
+        <p class="contact-location">Santiago, Chile</p>
+        <ul class="social-links" aria-label="Redes sociales">
+          <li><a href="https://www.instagram.com/laventanacine" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/laventanacine" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.tiktok.com/@laventanacine" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="assets/logo.png" alt="" class="footer-mark" width="32" height="32">
+    <p>La Ventana Cine — Empresa B · Santiago, Chile</p>
+    <p class="footer-credit">Concepto de diseño por Mateo Valdeavellano</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
