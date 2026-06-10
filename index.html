@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mateo Valdeavellano — Diseño y Desarrollo Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --surface: #131a26;
+      --text: #f0ead8;
+      --muted: rgba(240,234,216,0.55);
+      --accent: #c8a870;
+      --border: rgba(200,168,112,0.18);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    header { text-align: center; margin-bottom: 3rem; }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      letter-spacing: 0.02em;
+    }
+    p.tagline {
+      color: var(--muted);
+      margin-top: 0.75rem;
+      font-weight: 300;
+    }
+    .demos {
+      display: grid;
+      gap: 1.25rem;
+      width: 100%;
+      max-width: 480px;
+    }
+    .demo-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .demo-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .demo-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      margin-bottom: 0.35rem;
+    }
+    .demo-card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 300;
+    }
+    footer {
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 300;
+    }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Conceptos de Diseño Web</h1>
+    <p class="tagline">Ejemplos de sitios para restaurantes y gastronomía</p>
+  </header>
+  <div class="demos">
+    <a class="demo-card" href="la-perla-del-pacifico.html">
+      <h2>La Perla del Pacífico</h2>
+      <span>Cocina de mar — estilo elegante, paleta navy &amp; oro</span>
+    </a>
+    <a class="demo-card" href="nowas-cantina.html">
+      <h2>Nowas Cantina</h2>
+      <span>Restaurant temático — estilo audaz, neón &amp; oscuridad</span>
+    </a>
+  </div>
+  <footer>
+    Mateo Valdeavellano — <a href="https://www.linkedin.com/in/mateo-valdeavellano-1534b9390/">LinkedIn</a>
+  </footer>
+</body>
+</html>
