@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 150" role="img" aria-label="SANFIC — Santiago Festival Internacional de Cine">
+  <g fill="none" stroke="#1d1a17" stroke-width="2" stroke-linecap="round" opacity="0.85">
+    <path d="M44 146 C 38 122, 50 98, 78 82"/>
+    <path d="M216 146 C 222 122, 210 98, 182 82"/>
+  </g>
+  <g fill="#1d1a17">
+    <ellipse cx="44" cy="146" rx="10" ry="4.5" transform="rotate(-15 44 146)"/>
+    <ellipse cx="40" cy="130" rx="10" ry="4.5" transform="rotate(-32 40 130)"/>
+    <ellipse cx="46" cy="114" rx="10" ry="4.5" transform="rotate(-50 46 114)"/>
+    <ellipse cx="60" cy="98" rx="10" ry="4.5" transform="rotate(-68 60 98)"/>
+    <ellipse cx="78" cy="84" rx="10" ry="4.5" transform="rotate(-85 78 84)"/>
+
+    <ellipse cx="216" cy="146" rx="10" ry="4.5" transform="rotate(15 216 146)"/>
+    <ellipse cx="220" cy="130" rx="10" ry="4.5" transform="rotate(32 220 130)"/>
+    <ellipse cx="214" cy="114" rx="10" ry="4.5" transform="rotate(50 214 114)"/>
+    <ellipse cx="200" cy="98" rx="10" ry="4.5" transform="rotate(68 200 98)"/>
+    <ellipse cx="182" cy="84" rx="10" ry="4.5" transform="rotate(85 182 84)"/>
+  </g>
+  <text x="130" y="58" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="34" letter-spacing="6" fill="#1d1a17">SANFIC</text>
+  <text x="130" y="80" text-anchor="middle" font-family="Sora, system-ui, sans-serif" font-weight="600" font-size="12" letter-spacing="4" fill="#1d1a17">SANTIAGO</text>
+</svg>
