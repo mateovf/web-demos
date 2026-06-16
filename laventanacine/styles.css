@@ -524,6 +524,11 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-soft);
   isolation: isolate;
   transition: border-color var(--duration-normal) var(--ease-out-expo);
+  /* Cards always sit on a dark photo gradient — override page text tokens */
+  --text: #f3efe7;
+  --muted: rgba(243, 239, 231, 0.65);
+  --muted-2: rgba(243, 239, 231, 0.42);
+  color: var(--text);
 }
 .film-card:hover,
 .film-card:focus-within {
