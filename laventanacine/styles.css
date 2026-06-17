@@ -900,7 +900,7 @@ h1, h2, h3, h4 {
 .film-card { cursor: pointer; }
 
 .film-card::before {
-  content: 'Ver detalles';
+  content: 'View details';
   position: absolute;
   top: var(--space-sm);
   left: var(--space-sm);
