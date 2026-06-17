@@ -450,6 +450,21 @@ h1, h2, h3, h4 {
   gap: clamp(2.5rem, 6vw, 6rem);
   align-items: start;
 }
+.manifesto-photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  align-self: stretch;
+  min-height: 320px;
+}
+.manifesto-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.92) contrast(1.04);
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1069,6 +1084,7 @@ dialog.film-modal[open] {
    ============================================ */
 @media (max-width: 1024px) {
   .manifesto-inner { grid-template-columns: 1fr; }
+  .manifesto-photo { min-height: 0; aspect-ratio: 16 / 9; }
   .founder { grid-template-columns: 160px 1fr; }
 }
 
