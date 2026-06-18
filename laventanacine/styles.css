@@ -973,9 +973,9 @@ dialog.film-modal {
   inset: 0;
   margin: auto;
   padding: 0;
-  max-width: 940px;
-  width: calc(100% - 2rem);
-  max-height: calc(100svh - 3rem);
+  max-width: none;
+  width: calc(100% - 1.5rem);
+  max-height: calc(100svh - 1.5rem);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius);
   background: var(--bg-elevated);
@@ -1057,6 +1057,44 @@ dialog.film-modal[open] {
   gap: var(--space-sm);
   overflow-y: auto;
   max-height: calc(100svh - 3rem);
+}
+
+/* BTS photo strip */
+.modal-bts {
+  border-top: 1px solid var(--border-strong);
+  padding: var(--space-sm) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--bg-elevated);
+}
+.modal-bts-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.modal-bts-strip {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.modal-bts-strip::-webkit-scrollbar { display: none; }
+.modal-bts-strip img {
+  height: 110px;
+  width: auto;
+  object-fit: cover;
+  border-radius: calc(var(--radius) / 2);
+  flex-shrink: 0;
+  opacity: 0.85;
+  transition: opacity var(--duration-fast) var(--ease-out-expo),
+              transform var(--duration-fast) var(--ease-out-expo);
+}
+.modal-bts-strip img:hover {
+  opacity: 1;
+  transform: scale(1.03);
 }
 .modal-title {
   font-size: clamp(1.2rem, 1.5vw + 0.8rem, 1.8rem);

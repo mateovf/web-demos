@@ -56,8 +56,9 @@
   }
 
   // Film card modal
-  const modal  = document.querySelector('.film-modal');
-  const iframe = modal.querySelector('.modal-iframe');
+  const modal    = document.querySelector('.film-modal');
+  const iframe   = modal.querySelector('.modal-iframe');
+  const btsStrip = modal.querySelector('.modal-bts-strip');
 
   function vimeoEmbed(url) {
     // Handles both https://vimeo.com/123456 and https://vimeo.com/123456/abcdef (unlisted)
@@ -82,6 +83,12 @@
     watchEl.hidden  = !card.dataset.watch || card.dataset.watch === '#';
 
     iframe.src = vimeoEmbed(card.dataset.trailer || '');
+
+    const btsPaths = (card.dataset.bts || '').split(',').map(s => s.trim()).filter(Boolean);
+    btsStrip.innerHTML = btsPaths.map(src =>
+      `<img src="${src}" alt="Behind the scenes" loading="lazy">`
+    ).join('');
+
     modal.showModal();
   }
 
@@ -90,7 +97,7 @@
   }
 
   // Stop video playback on any close (X button, backdrop click, Escape)
-  modal.addEventListener('close', () => { iframe.src = ''; });
+  modal.addEventListener('close', () => { iframe.src = ''; btsStrip.innerHTML = ''; });
 
   // Close when clicking the backdrop (click hits <dialog> itself, not .modal-inner)
   modal.addEventListener('click', (e) => {
